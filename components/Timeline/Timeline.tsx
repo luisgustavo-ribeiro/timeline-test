@@ -6,17 +6,17 @@ let items = [
 	{
         step: 1,
 		label: 'Concepção',
-		status: 'active'
+		status: 'completed'
 	},
 	{
         step: 2,
 		label: 'Planejamento',
-		status: 'inactive'
+		status: 'completed'
 	},
 	{
         step: 3,
 		label: 'Execução',
-		status: 'inactive'
+		status: 'active'
 	},
 	{
         step: 4,

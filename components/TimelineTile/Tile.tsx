@@ -7,7 +7,6 @@ interface ITile {
 	status?: 'inactive' | 'active' | 'completed' | string;
 	tilePosition?: 'start' | 'middle' | 'end';
 	label?: string;
-	isActive?: boolean;
 	handleClick: () => void;
 }
 
@@ -16,7 +15,7 @@ export const Tile = (props: ITile) => {
 	const inactiveClass = `${styles.tile} ${styles[`${props.tilePosition}`]} ${styles[props.status ? props.status : 'inactive']}`;
 
 	return (
-		<div className={props.isActive ? activeClass : inactiveClass} onClick={props.handleClick}>
+		<div className={props.status === 'active' ? activeClass : inactiveClass} onClick={props.handleClick}>
 			{props.status === 'completed' ? (
 				<span className={styles.stageIndicator}>
 					<CheckmarkRegular fontSize={16} />
