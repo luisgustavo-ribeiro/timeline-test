@@ -80,15 +80,11 @@
     font-weight: 600;
 }
 
-.tile.start.ongoing:after {
-    background-color: #009039;
-}
-
-.tile.start.started .stageIndicator {
+.tile.active .stageIndicator {
     border-color: #009039;
 }
 
-.tile.start.started .stageIndicator:after {
+.tile.active .stageIndicator:after {
     content: '';
     height: 8px;
     width: 8px;
@@ -97,4 +93,26 @@
     position: absolute;
     top: calc(50% - 4px);
     left: calc(50% - 4px);
+}
+
+.tile.start.completed:after {
+    background-color: #009039;
+}
+
+.tile.completed .stageIndicator {
+    border: none;
+    background-color: #009039;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+}
+
+.tile.middle.active:before,
+.tile.end.active:before {
+    background-color: #009039;
+}
+
+.tile.middle.completed:before,
+.tile.middle.completed:after {
+    background-color: #009039;
 }
